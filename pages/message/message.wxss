@@ -1,0 +1,64 @@
+/* pages/myvideo/myvideo.wxss */
+
+.items{
+  background:white;
+  border-bottom: 20rpx solid #e0e0e0;
+}
+.item_info{
+  margin-left: 25rpx;
+  margin-right: 25rpx;
+  display: flex;
+}
+.avatarurl{
+    width: 100rpx;
+    height:100rpx;
+    border-radius: 50%;
+    margin-top:  25rpx;
+    
+}
+.item_name_date{
+  margin-top: 25rpx;
+  margin-left: 25rpx;
+}
+.nickname{
+  font-size: 30rpx;
+}
+.loca_date{
+  font-size: 25rpx;
+}
+.info_content{
+  margin-left: 25rpx;
+  margin-right: 25rpx;
+  display: flex;
+  background: #f9f9f9;
+  margin-bottom: 25rpx;
+}
+.info_poster{
+   width: 140rpx;
+    height:140rpx;
+}
+.info_text{
+  margin-left: 25rpx;
+  margin-right: 25rpx;
+  margin-bottom: 25rpx;
+}
+.info_title{
+  margin-left: 25rpx;
+  white-space: pre-wrap;
+}
+.info_title_text{
+text-align: center;
+font-size: 25rpx;
+color: blue;
+}
+.info_title_content{
+  text-align: center;
+font-size: 25rpx;
+  word-break:break-all; 
+}
+.noting{
+  display: block;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}

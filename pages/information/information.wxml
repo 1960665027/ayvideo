@@ -1,0 +1,42 @@
+<view class="wrap">
+  <!--用户登录-->
+  <view class="user_logon">
+    <view bindtap="bindViewTap" class="userinfo">
+      <image bindtap="change_avatarUrl_" class="userinfo-avatar" src="{{userInfo[0].avatarurl || avatar}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo[0].nickname}}</text>
+    </view>
+  </view>
+  <view class="list_box">
+      <view class='beiguanzhu'>
+      <view>{{followcount}}</view>
+      <view>关注我的人</view>
+      </view>
+      <view class='guanzhu'>
+       <view>{{myfollowcount}}</view>
+      <view>我关注的人</view>
+      </view>
+  </view>
+  <view class='information_box'>
+     <view class='info_items'>
+       <view class='info_title'>国籍</view>
+       <view class='info_list'>{{userInfo[0].country}}</view>
+     </view>
+      <view class='info_items'>
+       <view class='info_title'>省份</view>
+        <view class='info_list'>{{userInfo[0].province}}</view>
+     </view>
+      <view class='info_items'>
+       <view class='info_title'>城市</view>
+        <view class='info_list'>{{userInfo[0].city}}</view>
+     </view>
+      <view class='info_items'>
+       <view class='info_title'>性别</view>
+        <view class='info_list'wx:if="{{userInfo[0].gender==1}}">男
+        </view>
+        <view class='info_list' wx:if="{{userInfo[0].gender==2}}">女
+        </view>
+        <view class='info_list'wx:if="{{userInfo[0].gender==0}}">other
+        </view>
+     </view>
+  </view>
+</view>

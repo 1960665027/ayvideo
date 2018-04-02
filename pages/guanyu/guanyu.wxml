@@ -1,0 +1,39 @@
+<view class='page'>
+  <view class='toplogo'>
+    <image class='iconlogo' src='/imgs/play.png'></image>
+    <text class='title'>哎呀小视频</text>
+  </view>
+  <view class='fenlei'>
+  <text class='fltitle'>产品介绍</text>
+  </view>
+  <view class="list_box"></view>
+    <view class='zhengwen'>
+    <view>与微信小视频连接</view>
+    <view>大数据智能推荐</view>
+    <view>分享好友视频交互</view>
+    <view>极速上传短视频</view>
+    <view>云端鉴涉黄、涉政</view>
+    <view>宣传正能量</view>
+    <view>一个有节操的团队</view>
+  </view>
+   <view class='fenlei'>
+  <text class='fltitle'>联系我们</text>
+  </view>
+  <view class="list_box"></view>
+    <view class='zhengwen'>
+    <view>18276061387@163.com</view>
+  </view>
+   <view class='fenlei'>
+  <text class='fltitle'>当前版本</text>
+  </view>
+  <view class="list_box"></view>
+    <view class='zhengwen'>
+    <view>V1.4.0</view>
+  </view>
+      <view class="weui-footer">
+                <view class="weui-footer__links">
+                    <view class="weui-footer__link">雅C团队</view>
+                </view>
+                <view class="weui-footer__text">Copyright © 2012-2018 Yac. All Rights Reserved.</view>
+            </view>
+</view>

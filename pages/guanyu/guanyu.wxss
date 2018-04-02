@@ -1,0 +1,37 @@
+/* pages/guanyu/guanyu.wxss */
+.iconlogo{
+  
+  width:92px;
+  height: 92px;
+}
+.toplogo{
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+}
+.title{
+  display:block;
+  font-size: 32rpx;
+  color: #ccc;
+}
+.list_box{
+  border-bottom: 2px solid #edece8;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+.fltitle{
+   font-weight:blod;
+}
+.fenlei{
+  margin-top: 45rpx;
+  margin-left: 20rpx;
+}
+.zhengwen{
+  text-align: center;
+  font-size: 32rpx;
+  margin-top: 50rpx;
+}
+.weui-footer{
+  margin-bottom: 30rpx;
+  margin-top: 20rpx;
+}

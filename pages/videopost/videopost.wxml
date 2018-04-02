@@ -1,0 +1,22 @@
+<view class="page">
+ <view >
+   <video id="myVideo" class="vd"  src='{{videodata}}' bindtap="vd" controls autoplay></video>
+
+ </view>
+ <form class='content' bindsubmit="formSubmit">
+   <textarea  auto-height name="title" type="text" value="{{title}}" class='titlewrit' placeholder="标题"></textarea>
+   <textarea auto-height name="content" type="text" value="{{content}}" class='titlewrit'placeholder="说明"></textarea>
+   <view class='type_div'>
+     <text class='typetitle'>选择类型</text>
+   </view>
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">
+      {{array[index]}}
+    </view>
+  </picker>
+
+   <button class='buttonvideo'form-type="submit" type='primary'>提交上传</button>
+   
+ </form>
+ 
+</view>

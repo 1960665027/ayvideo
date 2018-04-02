@@ -1,0 +1,263 @@
+<scroll-view scroll-x="true" style="height:51px;">
+    <view class="weui-navbar" style="width:{{bodyList.length*50}}px;">
+      <block wx:for-items="{{bodyList}}" wx:for-item="item" wx:key="{{index}}">
+        <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+          <view class="weui-navbar__title">{{item.title}}</view>
+        </view>
+      </block>
+      <view class="weui-navbar__slider" style="width:{{windowHeight/bodyList.length/windowHeight*100}}%; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+  
+            </view>
+
+  </scroll-view>
+<view class="weui-tab__panel">
+<!-- 搞笑列表-->
+ <view class="weui-tab__content" wx:if= "{{activeIndex == 0}}"> 
+
+<view class="content">
+      <view class="left">
+        <block wx:for="{{videolist}}" wx:key="">
+          <template is="item" data="{{...item}}" wx:if="{{index%2==0}}"></template>
+        </block>
+      </view>
+      <view class="right">
+        <block wx:for="{{videolist}}" wx:key="">
+          <template is="item" data="{{...item}}" wx:if="{{index%2==1}}"></template>
+        </block>
+      </view>
+    </view>
+<!--  下面是一个模块 -->
+<template name="item">
+  <view class="item">
+  <navigator url="../video-play/video-play?vid={{id}}">
+    <image class="item-img" src="{{imgpath}}" mode="widthFix"></image>
+    </navigator>
+   <navigator url="../friend/friend?id={{openid}}">
+      <view class='items'>   
+         <image class='poster' src='{{avatarurl}}' bindtap='friendbind'/>
+           <view class='mate'>
+           <view  class="title">{{title}}</view>
+           <view class='texttype'><text wx:if="{{kan_count==''}}">0</text>
+      <text wx:if="{{kan_count!=null}}">{{kan_count}}</text>次观看</view>
+              </view>
+            </view>
+            </navigator>
+  </view>
+
+</template>
+<!-- 搞笑列表 end-->
+ </view>
+ <!-- 游戏列表-->
+<view class="weui-tab__content" wx:if="{{activeIndex == 1}}">
+<view class="content">
+      <view class="left">
+        <block wx:for="{{videolist}}" wx:key="">
+          <template is="item" data="{{...item}}" wx:if="{{index%2==0}}"></template>
+        </block>
+      </view>
+      <view class="right">
+        <block wx:for="{{videolist}}" wx:key="">
+          <template is="item" data="{{...item}}" wx:if="{{index%2==1}}"></template>
+        </block>
+      </view>
+    </view>
+<!--  下面是一个模块 -->
+<template name="item">
+  <view class="item">
+  <navigator url="../video-play/video-play?vid={{id}}">
+    <image class="item-img" src="{{imgpath}}" mode="widthFix"></image>
+    </navigator>
+   <navigator url="../friend/friend?id={{openid}}">
+      <view class='items'>   
+         <image class='poster' src='{{avatarurl}}' bindtap='friendbind'/>
+           <view class='mate'>
+           <view  class="title">{{title}}</view>
+           <view class='texttype'><text wx:if="{{kan_count==''}}">0</text>
+      <text wx:if="{{kan_count!=null}}">{{kan_count}}</text>次观看</view>
+              </view>
+            </view>
+            </navigator>
+  </view>
+
+</template>
+<!-- 游戏列表end-->
+ </view>
+  <!-- 音乐列表-->
+<view class="weui-tab__content" wx:if="{{activeIndex == 2}}">
+<view class="content">
+      <view class="left">
+        <block wx:for="{{videolist}}" wx:key="">
+          <template is="item" data="{{...item}}" wx:if="{{index%2==0}}"></template>
+        </block>
+      </view>
+      <view class="right">
+        <block wx:for="{{videolist}}" wx:key="">
+          <template is="item" data="{{...item}}" wx:if="{{index%2==1}}"></template>
+        </block>
+      </view>
+    </view>
+<!--  下面是一个模块 -->
+<template name="item">
+  <view class="item">
+  <navigator url="../video-play/video-play?vid={{id}}">
+    <image class="item-img" src="{{imgpath}}" mode="widthFix"></image>
+    </navigator>
+   <navigator url="../friend/friend?id={{openid}}">
+      <view class='items'>   
+         <image class='poster' src='{{avatarurl}}' bindtap='friendbind'/>
+           <view class='mate'>
+           <view  class="title">{{title}}</view>
+           <view class='texttype'><text wx:if="{{kan_count==''}}">0</text>
+      <text wx:if="{{kan_count!=null}}">{{kan_count}}</text>次观看</view>
+              </view>
+            </view>
+            </navigator>
+  </view>
+
+</template>
+<!-- 音乐列表end-->
+ </view>
+
+ <!-- 开眼列表-->
+<view class="weui-tab__content" wx:if="{{activeIndex == 3}}">
+<view class="content">
+      <view class="left">
+        <block wx:for="{{videolist}}" wx:key="">
+          <template is="item" data="{{...item}}" wx:if="{{index%2==0}}"></template>
+        </block>
+      </view>
+      <view class="right">
+        <block wx:for="{{videolist}}" wx:key="">
+          <template is="item" data="{{...item}}" wx:if="{{index%2==1}}"></template>
+        </block>
+      </view>
+    </view>
+<!--  下面是一个模块 -->
+<template name="item">
+  <view class="item">
+  <navigator url="../video-play/video-play?vid={{id}}">
+    <image class="item-img" src="{{imgpath}}" mode="widthFix"></image>
+    </navigator>
+   <navigator url="../friend/friend?id={{openid}}">
+      <view class='items'>   
+         <image class='poster' src='{{avatarurl}}' bindtap='friendbind'/>
+           <view class='mate'>
+           <view  class="title">{{title}}</view>
+           <view class='texttype'><text wx:if="{{kan_count==''}}">0</text>
+      <text wx:if="{{kan_count!=null}}">{{kan_count}}</text>次观看</view>
+              </view>
+            </view>
+            </navigator>
+  </view>
+
+</template>
+<!-- 开眼列表end-->
+</view>
+
+  <!-- 二次元列表-->
+<view class="weui-tab__content" wx:if="{{activeIndex == 4}}">
+<view class="content">
+      <view class="left">
+        <block wx:for="{{videolist}}" wx:key="">
+          <template is="item" data="{{...item}}" wx:if="{{index%2==0}}"></template>
+        </block>
+      </view>
+      <view class="right">
+        <block wx:for="{{videolist}}" wx:key="">
+          <template is="item" data="{{...item}}" wx:if="{{index%2==1}}"></template>
+        </block>
+      </view>
+    </view>
+<!--  下面是一个模块 -->
+<template name="item">
+  <view class="item">
+  <navigator url="../video-play/video-play?vid={{id}}">
+    <image class="item-img" src="{{imgpath}}" mode="widthFix"></image>
+    </navigator>
+   <navigator url="../friend/friend?id={{openid}}">
+      <view class='items'>   
+         <image class='poster' src='{{avatarurl}}' bindtap='friendbind'/>
+           <view class='mate'>
+           <view  class="title">{{title}}</view>
+           <view class='texttype'><text wx:if="{{kan_count==''}}">0</text>
+      <text wx:if="{{kan_count!=null}}">{{kan_count}}</text>次观看</view>
+              </view>
+            </view>
+            </navigator>
+  </view>
+
+</template>
+<!-- 二次元列表end-->
+ </view>
+
+ <!-- 科技列表-->
+<view class="weui-tab__content" wx:if="{{activeIndex == 5}}">
+<view class="content">
+      <view class="left">
+        <block wx:for="{{videolist}}" wx:key="">
+          <template is="item" data="{{...item}}" wx:if="{{index%2==0}}"></template>
+        </block>
+      </view>
+      <view class="right">
+        <block wx:for="{{videolist}}" wx:key="">
+          <template is="item" data="{{...item}}" wx:if="{{index%2==1}}"></template>
+        </block>
+      </view>
+    </view>
+<!--  下面是一个模块 -->
+<template name="item">
+  <view class="item">
+  <navigator url="../video-play/video-play?vid={{id}}">
+    <image class="item-img" src="{{imgpath}}" mode="widthFix"></image>
+    </navigator>
+   <navigator url="../friend/friend?id={{openid}}">
+      <view class='items'>   
+         <image class='poster' src='{{avatarurl}}' bindtap='friendbind'/>
+           <view class='mate'>
+           <view  class="title">{{title}}</view>
+           <view class='texttype'><text wx:if="{{kan_count==''}}">0</text>
+      <text wx:if="{{kan_count!=null}}">{{kan_count}}</text>次观看</view>
+              </view>
+            </view>
+            </navigator>
+  </view>
+
+</template>
+<!-- 科技列表end-->
+</view>
+ <!-- 其他列表-->
+<view class="weui-tab__content" wx:if="{{activeIndex == 6}}">
+<view class="content">
+      <view class="left">
+        <block wx:for="{{videolist}}" wx:key="">
+          <template is="item" data="{{...item}}" wx:if="{{index%2==0}}"></template>
+        </block>
+      </view>
+      <view class="right">
+        <block wx:for="{{videolist}}" wx:key="">
+          <template is="item" data="{{...item}}" wx:if="{{index%2==1}}"></template>
+        </block>
+      </view>
+    </view>
+<!--  下面是一个模块 -->
+<template name="item">
+  <view class="item">
+  <navigator url="../video-play/video-play?vid={{id}}">
+    <image class="item-img" src="{{imgpath}}" mode="widthFix"></image>
+    </navigator>
+   <navigator url="../friend/friend?id={{openid}}">
+      <view class='items'>   
+         <image class='poster' src='{{avatarurl}}' bindtap='friendbind'/>
+           <view class='mate'>
+           <view  class="title">{{title}}</view>
+           <view class='texttype'><text wx:if="{{kan_count==''}}">0</text>
+      <text wx:if="{{kan_count!=null}}">{{kan_count}}</text>次观看</view>
+              </view>
+            </view>
+            </navigator>
+  </view>
+
+</template>
+<!-- 其他列表end-->
+</view>
+</view>

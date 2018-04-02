@@ -1,0 +1,172 @@
+<view class="page" wx:for="{{videolist}}">
+
+   <view class='video' >
+    <video bindended='endpaly'id="myVideo" bindfullscreenchange='bindfull' direction='{{quanping}}' src="{{videopath}}"  class="vd" controls autoplay >
+    </video>
+  </view>  
+   <view class="BottomBlock">
+    <view class='mate'>
+      <view class='title'>
+       <text>{{item.title}}</text>
+      </view>
+      <view  class='body'>
+      <text wx:if="{{item.kan_count==''}}">0</text>
+      <text wx:if="{{item.kan_count!=null}}">{{item.kan_count}}</text>次观看
+      </view>
+      <view  class="item">
+    
+    <view class="item_left" class="top_image" bindtap='dianzanbindtap'>
+   
+        <image wx:if="{{type=='取消赞'}}" src="/imgs/dianzan.png" class="image"/>
+        <image wx:if="{{type=='赞'}}" src="/imgs/selectdianzan.png" class="image"/>
+        <view class="mark" >
+        <text class="text" wx:if="{{zancount==null}}">0</text>
+        <text class="text" wx:if="{{zancount !=null}}">{{zancount}}</text>
+        </view>
+        
+    </view>
+    
+      <view class="item_left" class="top_image" bindtap='nonzanbindtap'>
+   
+           <image wx:if="{{nontype=='取消不赞'}}" src="/imgs/nondianzan.png" class="image"/>
+        <image wx:if="{{nontype=='不赞'}}" src="/imgs/nonselectdianzan.png" class="image"/>
+        <view class="mark" >
+        <text class="text" wx:if="{{nonzancount==null}}">0</text>
+        <text class="text" wx:if="{{nonzancount !=null}}">{{nonzancount}}</text>
+        </view>
+        
+    </view>
+      <view class="item_left" class="top_image" bindtap='share_button'>
+        <button open-type='share' class='share_button'>
+        <image src="/imgs/fenxiang.png" class="image"/>
+        </button>
+        <view class="mark" ><text class="text">分享</text></view>
+        
+    </view>
+      <view class="item_left" class="top_image" bindtap='downvideo'>
+   
+        <image src="/imgs/xiazai.png" class="image"/>
+        <view class="mark" ><text class="text">下载</text></view>
+        
+    </view>
+    <view class="item_left" class="top_image" bindtap='jubaobind'>
+   
+        <image src="/imgs/jubao.png" class="image"/>
+        <view class="mark" ><text class="text">举报</text></view>
+        
+    </view>
+</view>
+    </view>  
+    <view class='items_two'>
+     <navigator url="../friend/friend?id={{item.openid}}">
+          <image class='poster_two' src="{{item.avatarurl}}"/>
+           </navigator>
+           <view class='mate_two'>
+            <view  class="title_two">{{item.nickname}}</view>
+             <view class='texttype_two' wx:if="{{followcount==null}}">0  位关注者
+             </view>
+              <view class='texttype_two' wx:if="{{followcount!=null}}">{{followcount}}  位关注者
+             </view>
+           </view>
+ 
+           <view class='right_two'  bindtap='followbindtap'>
+           <image class='poster_two_gz'wx:if="{{followtype=='取消关注'}}" src="/imgs/guanzu.png"/>
+           <image class='poster_two_gz'wx:if="{{followtype=='关注'}}" src="/imgs/selectfollow.png"/>
+           <text class='right_text'wx:if="{{followtype=='取消关注'}}">关注</text>
+           <text class='right_text'style="color:#515151" wx:if="{{followtype=='关注'}}">已关注</text>
+           </view>
+     </view>
+     <view class='tuijian' style='height:5px;'>
+       <view class='tuijian_text'>
+       <text class='jiexialai'>接下来播放</text>
+       <checkbox-group class="autoswitch" bindchange="checkboxChange">
+           <label class="checkbox" wx:for="{{items}}">
+          {{item.value}}<checkbox class='checkbox_box' value="{{item.name}}" checked="{{item.checked}}"/>
+          </label>
+       </checkbox-group>
+       </view>
+  <view class='scroll_bofang'><!-- scroll视频 start-->
+<scroll-view scroll-y="true" style="heigee3 {}}px;" >
+    <view class="page">
+        <view class="page__bd">
+            <view class="weui-article">
+
+                    <view class="weui-article__section" wx:for="{{videorecommend}}">
+                       
+                        <navigator url="../video-play/video-play?vid={{item.id}}">
+                            <view class="weui-article__p video-list__item">
+
+                     <view class='items_jiaxia'>
+                  <image class='poster_jiaxia' src='{{item.imgpath}}'/>
+                       <view class='mate_jiaxia'>
+                        <view  class="title_jiaxia">{{item.title}}</view>
+                        <view class='texttype_jiaxia'>{{item.content}}</view>
+                        <view class='bofang_jiaxia'>{{item.kan_count}}次观看</view>
+                                </view>
+                        </view>        
+                            </view>
+                        </navigator>
+                         
+                    </view>
+                
+            </view>
+             
+        </view>
+
+    </view>
+</scroll-view >
+       </view><!-- scroll视频end-->
+       <view class='pinglun' ><!--评论start-->
+          <view class='pinglun_text'>
+           <text wx:if='{{commentcount==null}}'>评论  0</text>
+           <text wx:if='{{commentcount !=null}}'>评论  {{commentcount}}</text>
+           <view class='ping_content'>
+            <image class='poster_ping' src='{{userInfo[0].avatarurl}}'/>
+            <view class='input_ping' bindtap='bindcomment'>发表评论...</view>
+           </view>
+          </view>
+       </view><!--评论end-->
+       <view class='ping_list' ><!--评论列表start-->
+          <scroll-view scroll-y="true" style="heigee3 {}}px;" bindscrolltolower="lower"
+             lowser-threshold="{{viewHeight*viewPage}}">
+    <view class="page">
+        <view class="page__bd">
+            <view class="items__section" wx:for="{{commentlist}}">               
+        
+            <view class='items_ping'>
+             <image class='poster_ping' src='{{item.avatarurl}}'/>
+              <view class='mate_ping'>
+              <view  class="content_ping">{{item.content}}</view>
+              <view class='textdate_ping'>{{item.nickname}} * {{item.created_at}}</view>
+      <view class='ping_zan'>
+        <view class="item_left"  bindtap='pingzanbindtap'>
+        <image wx:if="{{commentzan=='取消评赞'}}" src="/imgs/dianzan.png" class="ping_icon"/>
+        <image wx:if="{{commentzan=='评赞'}}" src="/imgs/selectdianzan.png" class="ping_icon"/>
+           <view class="mark_ping" ><text class="text_ping">{{pingzancount}}</text></view>
+        </view>
+        <view class="item_left"  bindtap='nonpingzanbindtap'>
+
+                  <image wx:if="{{noncommentzan=='取消不评赞'}}" src="/imgs/nondianzan.png" class="ping_icon"/>
+        <image wx:if="{{noncommentzan=='不评赞'}}" src="/imgs/nonselectdianzan.png" class="ping_icon"/>
+
+           <view class="mark_ping" ><text class="text_ping">{{bupingzancount}}</text></view>
+        </view>
+
+        </view>
+             </view>
+                             
+               </view>
+              <view class="play_icon"></view>
+                        
+           </view>
+                
+      
+             
+        </view>
+
+    </view>
+</scroll-view >
+       </view><!--评论列表end-->
+     </view>
+     </view>
+</view>

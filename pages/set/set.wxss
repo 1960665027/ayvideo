@@ -1,0 +1,68 @@
+/* pages/set/set.wxss */
+page{
+  background: #fafafb;
+}
+.anglesList{ 
+  display:flex;
+  align-items:center;
+  height:100rpx; 
+  
+  background: white;
+} 
+.anglesList .textBox{ 
+  flex-grow:1;
+  display:flex;
+  margin-left:25rpx;
+} 
+
+.anglesList text{ 
+  display:block; 
+  max-width:12em; 
+  overflow:hidden; 
+  white-space:nowrap; 
+  text-overflow:ellipsis; 
+  font-size: 35rpx;
+}
+.jiantou_tou{
+  width: 36rpx;
+  height: 36rpx;
+  margin-top: 13rpx;
+  text-align: center;
+  margin-left: 480rpx;
+}
+.jiantou_tous{
+  width: 36rpx;
+  height: 36rpx;
+  margin-top: 13rpx;
+  text-align: center;
+  margin-left: 505rpx;
+}
+.title{
+margin: 25rpx 25rpx 25rpx 25rpx;
+}
+.title text{
+  font-size: 25rpx;
+}
+.shangchuan{
+  position:fixed;
+  z-index:2;
+  top: 10rpx;
+  right: 145rpx;
+}
+.shangchuan_img{
+  height: 50rpx;
+  width: 50rpx;
+  margin-left: 470rpx;
+  
+}
+.tishitext{
+  color: white;
+  text-align: center;
+  font-size: 30rpx;
+  margin-left: 45rpx;
+}
+.text_add{
+  background: black;
+   height: 80rpx;
+   width: 510rpx;
+}

@@ -1,0 +1,19 @@
+<view class="opinion_wrap">
+    <view class="wrap">
+    <view class='title'>
+      <view class='title_text'>
+      评论
+      </view>
+      <image bindtap='guanbibind' class='imgs' src='/imgs/guanbi.png'></image>
+    </view>
+        <form bindsubmit="formSubmit">
+            <view class="contant_wrap">
+                <view class="contant">
+                    <textarea name="opinion"   value="{{contact}}" auto-height placeholder-class="placeholder" placeholder="请输入评论内容..." />
+                </view>
+            </view>
+            
+            <button formType="submit" hover-class="none" loading="{{loading}}">提交</button>
+        </form>
+    </view>
+</view>

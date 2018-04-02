@@ -1,0 +1,26 @@
+<view class="anglesList" bindtap="clear"> 
+    <view class="textBox"> 
+      <text class="name">清理缓存</text>
+      <image class='jiantou_tous' src='image/jiantou_tou.png'></image>
+    </view> 
+    
+</view>
+  <view class='title'>
+   <text>若遇到使用问题，请清理缓存后重试</text>
+  </view>
+<view class="anglesList" bindtap='add'> 
+    <view class="textBox"> 
+      <text class="name">添加到桌面</text>
+      <image class='jiantou_tou' src='image/jiantou_tou.png'></image>
+    </view> 
+</view>
+
+  <view class='title'>
+   <text>添加小程序至手机桌面，方便快速打开。若无法看到桌面图标，请前往系统安全中心设置</text>
+  </view>
+  <view class='shangchuan' bindtap='add' hidden='{{loadadd}}'>
+   <image class='shangchuan_img' src='/imgs/zhishi.png'></image>
+   <view class='text_add'>
+      <text class='tishitext'>请点击右上角添加快捷图标到桌面</text>
+      </view>
+   </view>

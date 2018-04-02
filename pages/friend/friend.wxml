@@ -1,0 +1,50 @@
+<view class="wrap">
+  <!--用户登录-->
+  <view class="user_logon">
+    <view bindtap="bindViewTap" class="userinfo">
+      <image bindtap="change_avatarUrl_" class="userinfo-avatar" src="{{userInfo[0].avatarurl || avatar}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo[0].nickname}}</text>
+    </view>
+  </view>
+  <view class="list_box">
+      <view class='beiguanzhu'>
+      <view>{{fensicount}}</view>
+      <view>粉丝</view>
+      </view>
+      <view class='guanzhu'>
+       <view>{{followcount}}</view>
+      <view>关注</view>
+      </view>
+  </view>
+  <view class="content">
+      <view class="left">
+        <block wx:for="{{videodata}}" wx:key="">
+          <template is="item" data="{{...item}}" wx:if="{{index%2==0}}"></template>
+        </block>
+      </view>
+      <view class="right">
+        <block wx:for="{{videodata}}" wx:key="">
+          <template is="item" data="{{...item}}" wx:if="{{index%2==1}}"></template>
+        </block>
+      </view>
+    </view>
+<!--  下面是一个模块 -->
+<template name="item">
+  <view class="item">
+  <navigator url="../video-play/video-play?vid={{id}}">
+    <image class="item-img" src="{{imgpath}}" mode="widthFix"></image>
+    </navigator>
+   <navigator url="../friend/friend?id={{openid}}">
+      <view class='items'>   
+         <image class='poster' src='{{avatarurl}}' bindtap='friendbind'/>
+           <view class='mate'>
+           <view  class="title">{{title}}</view>
+           <view class='texttype'><text wx:if="{{kan_count==''}}">0</text>
+      <text wx:if="{{kan_count!=null}}">{{kan_count}}</text>次观看</view>
+              </view>
+            </view>
+            </navigator>
+  </view>
+
+</template>
+</view>

@@ -1,0 +1,75 @@
+
+
+.image2{
+    width: 30rpx;
+    height: 30rpx;
+}
+.image1{
+    width: 40rpx;
+    height: 40rpx;
+    padding-right: 18rpx;
+}
+
+.userinfo-avatar {
+    width: 140rpx;
+    height: 140rpx;
+    border-radius: 50%;
+}
+.userinfo{
+    width: 100%;
+    text-align: center;
+}
+.userinfo-nickname{
+    display: block;
+    color: white;
+    padding-top: 10rpx;
+}
+
+.user_logon{
+    height: 300rpx;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background: #f85439;
+}
+.user_logon navigator{
+    margin:  auto;
+}
+.user_logon button{
+    width: 340rpx;
+    color: #f28f2d;
+    background: -webkit-linear-gradient(left top,#fee0c3 50% ,#fdebc0 );
+}
+.list_box{
+  display: flex;
+  height: 128rpx;
+}
+.beiguanzhu{
+  background: #fa5639;
+  width: 50%;
+  color: white;
+  text-align: center;
+}
+.guanzhu{
+ background: #f23028;
+ width: 50%;
+ color: white;
+ text-align: center;
+}
+.information_box{
+  margin-left: 50rpx;
+  margin-right: 50rpx;
+
+}
+.info_items{
+ border-bottom: 1rpx solid #eee;
+  margin-top: 50rpx;
+
+}
+.info_title{
+ color: #fa5639;
+   
+}
+.info_list{
+  margin-bottom: 30rpx;
+}

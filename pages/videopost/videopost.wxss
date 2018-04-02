@@ -1,0 +1,34 @@
+/* pages/videopost/videopost.wxss */
+page{
+  background: #eee;
+}
+.vd{
+  width: 100%;
+  height: 180px;
+}
+.titlewrit{
+  margin-top: 80rpx;
+  border-bottom: 3rpx solid blue;
+  width: 85%;
+  margin-left: 50rpx;
+
+}
+.picker{
+   border-bottom: 3rpx solid blue;
+  width: 85%;
+  margin-left: 50rpx;
+}
+.typetitle{
+  font-size: 25rpx;
+  margin-left: 50rpx;
+  height:160rpx;
+  margin-right: 50rpx;
+}
+.type_div{
+  margin-top: 50rpx;
+}
+.buttonvideo{
+  margin-top: 100rpx;
+   margin-left: 50rpx;
+  margin-right: 50rpx;
+}

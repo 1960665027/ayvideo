@@ -1,0 +1,61 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/my/my",
+    "pages/video-play/video-play",
+    "pages/look/look",
+    "pages/follow/follow",
+    "pages/videopost/videopost",
+    "pages/search/search",
+    "pages/information/information",
+    "pages/opinion/opinion",
+    "pages/uploadvideo/uploadvideo",
+    "pages/myvideo/myvideo",
+    "pages/record/record",
+    "pages/set/set",
+    "pages/message/message",
+    "pages/friend/friend",
+    "pages/jubao/jubao",
+    "pages/commentlist/commentlist",
+    "pages/guanyu/guanyu"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#f85439",
+    "navigationBarTitleText": "哎呀小视频",
+    "navigationBarTextStyle":"white",
+    "backgroundColor": "#ccc"
+  },
+  "tabBar": {
+    "color": "#515151",
+    "borderStyle": "black",
+    "selectedColor": "#d81e06",
+    "backgroundColor": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "imgs/home.png",
+        "selectedIconPath": "imgs/homeSelected.png"
+      },
+      {
+        "pagePath": "pages/look/look",
+        "text": "发现",
+        "iconPath": "imgs/hot.png",
+        "selectedIconPath": "imgs/hotSelected.png"
+      },
+      {
+        "pagePath": "pages/follow/follow",
+        "text": "订阅",
+        "iconPath": "imgs/dingyue.png",
+        "selectedIconPath": "imgs/dingyueSelected.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "imgs/my.png",
+        "selectedIconPath": "imgs/mySelected.png"
+      }
+    ]
+  }
+}

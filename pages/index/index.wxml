@@ -1,0 +1,44 @@
+     <view class='searchview' bindtap="inputTyping">               
+        <icon  type="search" size="14"></icon>
+         <text class='searchtext'>搜索</text>
+     </view>
+<view class="content">
+      <view class="left">
+        <block wx:for="{{videolist}}" wx:key="">
+          <template is="item" data="{{...item}}" wx:if="{{index%2==0}}"></template>
+        </block>
+      </view>
+      <view class="right">
+        <block wx:for="{{videolist}}" wx:key="">
+          <template is="item" data="{{...item}}" wx:if="{{index%2==1}}"></template>
+        </block>
+      </view>
+    </view>
+<!--  下面是一个模块 -->
+<template name="item">
+  <view class="item">
+  <navigator url="../video-play/video-play?vid={{id}}">
+    <image class="item-img" src="{{imgpath}}" mode="widthFix"></image>
+    </navigator>
+   <navigator url="../friend/friend?id={{openid}}">
+      <view class='items'>   
+         <image class='poster' src='{{avatarurl}}' bindtap='friendbind'/>
+           <view class='mate'>
+           <view  class="title">{{title}}</view>
+           <view class='texttype'><text wx:if="{{kan_count==''}}">0</text>
+      <text wx:if="{{kan_count!=null}}">{{kan_count}}</text>次观看</view>
+              </view>
+            </view>
+            </navigator>
+  </view>
+
+</template>
+<view class='shangchuan' bindtap='shangchuan'>
+   <image class='shangchuan_img' src='/imgs/addvideo.png'></image>
+</view>
+<action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetChange">
+    <block wx:for="{{actionSheetItems}}">
+        <action-sheet-item class="item" bindtap="bindItemTap" data-name="{{item}}">{{item}}</action-sheet-item>
+    </block>
+    <action-sheet-cancel class="cancel">取消</action-sheet-cancel>
+</action-sheet>

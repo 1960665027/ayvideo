@@ -1,0 +1,30 @@
+<scroll-view scroll-y="true" style="heigee3 {}}px;" bindscrolltolower="lower"
+             lowser-threshold="{{viewHeight*viewPage}}">
+       <view class="page">
+            <view class="items" wx:for="{{videodata}}">
+                  <navigator url="../video-play/video-play?vid={{item.id}}">
+                      <view class='item_info'>
+                      <image class='avatarurl' src='{{item.avatarurl}}'></image>
+                      <view class='item_name_date'>
+                       <view class='nickname'>{{item.nickname}}</view>
+                       <view class='loca_date'>{{item.loca_date}}</view>
+                      </view>
+                      </view>
+                      <view class='info_text'>
+                      <text>赞了我</text>
+                      </view>
+                      <view class='info_content'>
+                         <image class='info_poster' src='{{item.imgpath}}'></image>
+                         <view class='info_title'>
+            <text class='info_title_text'>{{userInfo[0].nickname}}: </text>
+           <text class='info_title_content'>{{item.title}}</text>
+                         </view>
+                      </view>
+                  </navigator>
+                         
+            </view>
+    </view>
+</scroll-view >
+<view class='noting' hidden='{{loading}}'>
+  <text>没有更多了...</text>
+</view>

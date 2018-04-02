@@ -1,0 +1,21 @@
+<view class="page">
+ <view >
+   <video id="myVideo" class="vd"  src='{{videodata}}' bindtap="vd" controls autoplay></video>
+
+ </view>
+ <form class='content' bindsubmit="formSubmit">
+   <textarea  auto-height name="title" type="text" value="{{title}}" class='titlewrit' placeholder="详细说明"></textarea>
+   <view class='type_div'>
+     <text class='typetitle'>举报理由</text>
+   </view>
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">
+      {{array[index]}}
+    </view>
+  </picker>
+
+   <button class='buttonvideo'form-type="submit" bindtap='buttonvideo' type='primary'>提交举报</button>
+   
+ </form>
+ 
+</view>

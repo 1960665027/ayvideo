@@ -1,0 +1,46 @@
+/* pages/search/search.wxss */
+
+.searchbar-result{
+    margin-top: 0;
+    font-size: 14px;
+}
+.searchbar-result:before{
+    display: none;
+}
+.weui-cell{
+    padding: 12px 15px 12px 35px;
+}
+.weui-search-bar{
+  background-color:white;
+  border: none;
+}
+.items_jiaxia{
+  display: flex;
+}
+.mate_jiaxia{
+  margin-left: 20rpx;
+}
+.title_jiaxia{
+  font-size: 30rpx;
+}
+.texttype_jiaxia{
+  font-size: 25rpx;
+  color: #000023;
+}
+.bofang_jiaxia{
+  font-size: 25rpx;
+  color: #000023;
+}
+.poster_jiaxia{
+  width: 300rpx;
+  height: 180rpx;
+}
+.weui-article__p .video-list__item{
+display: block;
+}
+.searchhidden{
+  display: flexl;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}

@@ -1,0 +1,98 @@
+/* pages/mycenter/mycenter.wxss */
+
+.image2{
+    width: 30rpx;
+    height: 30rpx;
+}
+.image1{
+    width: 40rpx;
+    height: 40rpx;
+    padding-right: 18rpx;
+}
+
+.userinfo-avatar {
+    width: 120rpx;
+    height: 120rpx;
+    border-radius: 50%;
+    margin-left: 30rpx;
+    margin-top: 30rpx;
+}
+.userinfo{
+  display: flex;
+}
+.userinfo-nickname{
+    color: white;
+    margin-left: 30rpx;
+    margin-top: 45rpx;
+}
+
+.user_logon{
+  height: 90px;
+  background-color: #f85439;  
+}
+
+.user_logon button{
+    width: 340rpx;
+    color: #f28f2d;
+    background: -webkit-linear-gradient(left top,#fee0c3 50% ,#fdebc0 );
+}
+.more{
+  margin-top: 65rpx;
+  margin-left: 180px;
+  width: 52rpx;
+  height: 52rpx;
+}
+.list_box{
+  border-bottom: 5px solid #edece8;
+}
+.anglesList{ 
+  display:flex;
+  align-items:center;
+ 
+  margin-left:25rpx;
+  border-bottom:1px solid #f1f1f1; 
+} 
+
+.anglesList .anglesNavigator{ 
+  display:flex;
+  align-items:center;
+  flex-grow:1;
+} 
+
+.anglesList .imgBox{ 
+  flex:0 0 110rpx;
+  width:110rpx; 
+  height:110rpx; 
+  border-radius:50%; 
+  padding:5rpx; 
+  margin-right:20rpx; 
+  background:white; 
+  
+} 
+
+.anglesList .imgBox image{ 
+  width:64rpx; 
+  height:64rpx; 
+
+  margin-top: 10px;
+} 
+
+.anglesList .textBox{ 
+  flex-grow:1;
+  display:flex;
+} 
+
+.anglesList text{ 
+  display:block; 
+  max-width:12em; 
+  overflow:hidden; 
+  white-space:nowrap; 
+  text-overflow:ellipsis; 
+}
+.jiantou_tou{
+  width: 36rpx;
+  height: 36rpx;
+  margin-top: 13rpx;
+  text-align: center;
+  margin-left: 370rpx;
+}
